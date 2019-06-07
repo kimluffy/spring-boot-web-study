@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.github.kimluffy.domain.HelloVO;
 import io.github.kimluffy.domain.HelloVO2;
+import io.github.kimluffy.domain.HelloVO3;
 
 @RestController
 public class HelloController {
@@ -29,6 +30,18 @@ public class HelloController {
 	public HelloVO2 hello3() {
 		
 		HelloVO2 vo = new HelloVO2();
+		vo.setComment("Hello");
+		vo.setName("kimluffy");
+		
+		System.out.println(vo);
+		
+		return vo;
+	}
+	
+	@GetMapping("/hello4")
+	public HelloVO3 hello4() {
+		
+		HelloVO3 vo = new HelloVO3();
 		vo.setComment("Hello");
 		vo.setName("kimluffy");
 		
